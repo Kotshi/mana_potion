@@ -10,11 +10,9 @@ public class RevertBody : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print(Input.mousePosition.x);
-        print(Screen.width / 2);
         if (Input.mousePosition.x < (Screen.width / 2))
-            gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
         else
-            gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
     }
 }
