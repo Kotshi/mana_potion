@@ -42,7 +42,3 @@ C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\Temp\bin\Debug\
 C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\obj\Debug\Assembly-CSharp.dll
 C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\obj\Debug\Assembly-CSharp.pdb
-C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\Temp\bin\Debug\UnityEngine.Advertisements.dll
-C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\Temp\bin\Debug\UnityEngine.Analytics.dll
-C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\Temp\bin\Debug\UnityEngine.Advertisements.xml
-C:\Users\Gildas\Documents\GitHub\mana_potion\New Unity Project 1\Temp\bin\Debug\UnityEngine.Analytics.xml
