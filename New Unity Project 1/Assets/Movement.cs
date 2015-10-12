@@ -5,7 +5,6 @@ public class Movement : MonoBehaviour {
     public int Speed;
     public int Accelleration;
     public int JumpSpeed;
-    public
     public int JumpAmount;
     private GroundCheck children;
     private Rigidbody2D rg2d;
