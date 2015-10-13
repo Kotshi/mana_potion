@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour {
     public int Accelleration;
     public int JumpSpeed;
     public int JumpAmount;
+    public int QuickFallSpeed;
     public float JumpLength;
     private float JumpStart;
     private GroundCheck children;
@@ -19,14 +20,25 @@ public class Movement : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void FixedUpdate() {
+    void Update() {
         if (rg2d.velocity.x < Speed)
             rg2d.AddForce(Vector2.right * Accelleration * Input.GetAxis("Horizontal"));
-        if (Input.GetButtonDown("Jump"))
-            JumpStart = Time.time;
-        if (Input.GetButton("Jump") && children.JumpCount < JumpAmount && Time.time - JumpStart < JumpLength)
+        if (Input.GetButtonDown("Vertical"))
+        {
+            if (Input.GetAxis("Vertical") > 0.01f)
+            {
+                JumpStart = Time.time;
+                children.QuickFall = true;
+            }
+            else if (children.QuickFall)
+            {
+                children.QuickFall = false;
+                rg2d.velocity = new Vector2(rg2d.velocity.x, rg2d.velocity.y - QuickFallSpeed);
+            }
+        }   
+        if (Input.GetAxis("Vertical") > 0.1f && children.JumpCount < JumpAmount && Time.time - JumpStart < JumpLength)
             rg2d.velocity = new Vector2(rg2d.velocity.x, JumpSpeed);
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Vertical") && Input.GetAxis("Vertical") > 0.01f)
             children.JumpCount++;
     }
 }
